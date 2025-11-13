@@ -1,0 +1,30 @@
+aws_region         = "us-east-1"
+environment         = "production"
+vpc_cidr            = "10.0.0.0/16"
+public_subnet_cidrs = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidrs = ["10.0.10.0/24", "10.0.11.0/24"]
+
+# Database
+db_instance_class        = "db.t3.micro"
+db_allocated_storage     = 20
+db_max_allocated_storage = 100
+db_name                  = "cruder"
+db_username              = "postgres"
+db_password              = "change-me-to-secure-password"
+db_multi_az              = true
+db_backup_retention_period = 7
+
+# ECS
+ecs_task_cpu      = "256"
+ecs_task_memory   = "512"
+app_version       = "latest"
+app_desired_count = 2
+app_min_count     = 2
+app_max_count     = 4
+ecr_repository_url = "123456789.dkr.ecr.us-east-1.amazonaws.com/cruder"
+
+# API
+api_key = "change-me-to-secure-api-key"
+
+# Logging
+log_retention_days = 7

@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cruder-config
+  namespace: default
+  labels:
+    app: cruder
+data:
+  config.yaml: |
+    server:
+      port: 8080
+      host: 0.0.0.0
+      env: production
+    database:
+      host: postgres.default.svc.cluster.local
+      port: 5432
+      user: postgres
+      dbname: cruder
+      sslmode: disable
+    api:
+      key: ""

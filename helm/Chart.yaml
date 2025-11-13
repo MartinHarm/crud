@@ -1,0 +1,17 @@
+apiVersion: v2
+name: cruder
+description: A Helm chart for deploying Cruder API application
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+keywords:
+  - cruder
+  - api
+  - go
+  - postgres
+maintainers:
+  - name: Your Organization
+    email: team@example.com
+home: https://github.com/yourusername/cruder
+sources:
+  - https://github.com/yourusername/cruder
